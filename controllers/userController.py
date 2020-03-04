@@ -48,13 +48,13 @@ def user_update(id):
             return validator.errors, status.HTTP_400_BAD_REQUEST
         success = userCollection.updateUserById(id, data)
         if success:
-            return "User Updated", status.HTTP_201_CREATED
+            return "User Updated", status.HTTP_200_OK
         return "Error in updating User", status.HTTP_500_INTERNAL_SERVER_ERROR
 
     elif request.method == "DELETE":
         success = userCollection.deleteUser(id)
         if success:
-            return "User Deleted", status.HTTP_201_CREATED
+            return "User Deleted", status.HTTP_200_OK
         return "Error in deleting User", status.HTTP_500_INTERNAL_SERVER_ERROR
     else:
         user = userCollection.getUserById(id)
