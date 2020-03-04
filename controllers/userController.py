@@ -1,5 +1,5 @@
 from flask import Blueprint, request
-from flask_api import status, exceptions
+from flask_api import status
 from dal import userCollection
 import json
 import re

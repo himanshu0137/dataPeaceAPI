@@ -1,7 +1,4 @@
-from flask import request, url_for
 from flask_api import FlaskAPI
-from os import environ
-from sys import exit
 from controllers import Routes
 from dal import initDb
 
