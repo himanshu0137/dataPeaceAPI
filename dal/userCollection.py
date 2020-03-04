@@ -1,3 +1,7 @@
+"""
+DataBase Methods for all user related functions
+"""
+
 from . import mongo
 
 def getUsers(skip, take, name, sortBy, direction):
